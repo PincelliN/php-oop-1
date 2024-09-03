@@ -15,7 +15,7 @@ class Movie
 
 
     //Costruttore della classe Movie. 
-    function __construct($title, $director, $lenguage, $production_date, $duration_in_minute, $genres, )
+    function __construct($title,Producer $director, $lenguage, $production_date, $duration_in_minute, $genres )
     {
         // Inizializzazione delle proprietà della classe
         $this->title = $title;
