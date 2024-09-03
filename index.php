@@ -2,10 +2,15 @@
 
 // Includi il file che contiene il database dei film
 require_once __DIR__.'/data/db.php';
+
+require_once __DIR__.'/Classes/producer.php';
 // Includi la classe Movie che definisce la struttura di un film
 require_once __DIR__.'/Classes/movie.php';
 
 // var_dump($db_movies);
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +37,7 @@ require_once __DIR__.'/Classes/movie.php';
                     <h5 class="card-title"><?php echo $Movie->title?></h5>
                     <!-- Nome del regista del film -->
                     <h6 class="card-subtitle mb-2 text-body-secondary">Direttore:
-                        <?php echo $Movie->director?>
+                        <?php echo $Movie->director->name . ' ' . $Movie->director->lastname?>
                     </h6>
                     <!-- Lista di informazioni aggiuntive del film -->
                     <ul>

@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__.'/producer.php';
 class Movie
 {
 
@@ -10,10 +11,11 @@ class Movie
     public $production_date;   // Data di produzione del film
     public $duration;          // Durata del film in minuti
     public $genres;            // Generi associati al film (array)
+    
 
 
     //Costruttore della classe Movie. 
-    function __construct($title, $director, $lenguage, $production_date, $duration_in_minute, $genres)
+    function __construct($title, $director, $lenguage, $production_date, $duration_in_minute, $genres, )
     {
         // Inizializzazione delle proprietà della classe
         $this->title = $title;
@@ -22,6 +24,7 @@ class Movie
         $this->production_date = $production_date;
         $this->duration = $duration_in_minute;
         $this->genres = $genres;
+    
     }
 
 
